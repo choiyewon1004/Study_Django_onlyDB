@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<h1>추천 옷 리스트 보기</h1>
+{% if select_list %}
+<ul>
+  {% for clo in select_list %}
+     <img src="/{{clo}}/"></img>
+    <br>
+  {% endfor %}
+</ul>
+{% else %}
+<p>추천 옷이 없습니다.</p>
+{% endif %}
+<html>
