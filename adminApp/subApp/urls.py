@@ -20,5 +20,8 @@ from subApp import views
 urlpatterns = [
 
     path('test/', views.test),
+    path('font_test/', views.font_test),
+    path('button_test/', views.button_test),
+    path('search_bar/', views.search_bar),
 
 ]

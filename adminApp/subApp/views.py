@@ -57,3 +57,13 @@ def test(request):
     context = {'select_list': selects}
 
     return render(request, 'subApp/test.html', context)
+
+
+def font_test(request):
+    return render(request, 'subApp/font_test.html')
+
+def button_test(request):
+    return render(request, 'subApp/button_test.html')
+
+def search_bar(request):
+    return render(request, 'subApp/index.html')
