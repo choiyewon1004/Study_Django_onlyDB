@@ -23,5 +23,7 @@ urlpatterns = [
     path('font_test/', views.font_test),
     path('button_test/', views.button_test),
     path('search_bar/', views.search_bar),
+    path('post_test/', views.post_test),
+    path('post_test/post_show/', views.post_show),
 
 ]

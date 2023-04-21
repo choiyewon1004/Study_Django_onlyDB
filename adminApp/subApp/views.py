@@ -67,3 +67,17 @@ def button_test(request):
 
 def search_bar(request):
     return render(request, 'subApp/index.html')
+
+
+def post_test(request):
+
+    objects = {
+        'id' : 'long'
+    }
+    return render(request, 'subApp/post_test.html', objects)
+
+def post_show(request):
+    if request.method == 'POST':
+        selected = request.POST.getlist('top_select')
+        print(selected)
+    return render(request, 'subApp/post_show.html')

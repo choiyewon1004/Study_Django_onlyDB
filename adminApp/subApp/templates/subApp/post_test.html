@@ -1,0 +1,111 @@
+<?php
+  $nb = $_POST[ "nb" ];
+  echo implode( ",", $nb );
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test page </title>
+</head>
+<body>
+    <h1> checkbox page</h1>
+
+    <form action="post_show/" method="post">
+      {% csrf_token %}
+        <div class="tab_content" id="top_content" >
+                <label><input type="checkbox" name="top_select" value="shirt_short"> 반팔 </label>
+                <label><input type="checkbox" name="top_select" value="top_select"> 긴팔 </label>
+                <label><input type="checkbox" name="top_select"> 맨투맨 </label>
+                <label><input type="checkbox" name="top_select"> 스웨터 </label>
+                <label><input type="checkbox" name="top_select"> 블라우스 </label>
+                <label><input type="checkbox" name="top_select"> 원피스 </label>
+                <label><input type="checkbox" name="top_select"> 니트 </label>
+            </div>
+            <div class="tab_content" id="bottom_content">
+                <label><input type="checkbox" name="jeans"> 청바지 </label>
+                <label><input type="checkbox" name="pants_winter"> 겨울바지 </label>
+                <label><input type="checkbox" name="pants_summer"> 여름바지 </label>
+                <label><input type="checkbox" name="skert"> 치마 </label>
+                <label><input type="checkbox" name="pants_cago"> 카고바지 </label>
+            </div>
+            <div class="tab_content" id="outer_content">
+                <label><input type="checkbox" name="kardigun"> 가디건 </label>
+                <label><input type="checkbox" name="jumper"> 점퍼 </label>
+                <label><input type="checkbox" name="jacket"> 재킷 </label>
+                <label><input type="checkbox" name="coat"> 코트 </label>
+                <label><input type="checkbox" name="padding"> 패딩 </label>
+            </div>
+      <button type="submit">저장</button>
+    </form>
+
+    <!--
+    <form id="contents" name="contents" method="post" action="post_show/">
+        {% csrf_token %}
+        id : <input name="id" type="text">
+        pw: <input name="name" type="text">
+
+        <p><label><input type="checkbox" name="nb[]" value="01"> 01</label></p>
+          <p><label><input type="checkbox" name="nb[]" value="02"> 02</label></p>
+          <p><label><input type="checkbox" name="nb[]" value="03"> 03</label></p>
+          <p><label><input type="checkbox" name="nb[]" value="04"> 04</label></p>
+          <p><label><input type="checkbox" name="nb[]" value="05"> 05</label></p>
+        <p><input type="submit" value="Submit"></p>
+
+
+        <div class="tabs">
+            <input id="top" type="radio" name="tab_item" checked>
+            <label class="tab_item" for="top">상의</label>
+            <input id="bottom" type="radio" name="tab_item">
+            <label class="tab_item" for="bottom">하의</label>
+            <input id="outer" type="radio" name="tab_item">
+            <label class="tab_item" for="outer">아우터</label>
+
+            <div class="tab_content" id="top_content" >
+                <label><input type="checkbox" name="shirt_short"> 반팔 </label>
+                <label><input type="checkbox" name="shirt_long"> 긴팔 </label>
+                <label><input type="checkbox" name="shirt_sweat"> 맨투맨 </label>
+                <label><input type="checkbox" name="shirt"> 스웨터 </label>
+                <label><input type="checkbox" name="blous"> 블라우스 </label>
+                <label><input type="checkbox" name="onepice"> 원피스 </label>
+                <label><input type="checkbox" name="neet"> 니트 </label>
+            </div>
+            <div class="tab_content" id="bottom_content">
+                <label><input type="checkbox" name="jeans"> 청바지 </label>
+                <label><input type="checkbox" name="pants_winter"> 겨울바지 </label>
+                <label><input type="checkbox" name="pants_summer"> 여름바지 </label>
+                <label><input type="checkbox" name="skert"> 치마 </label>
+                <label><input type="checkbox" name="pants_cago"> 카고바지 </label>
+            </div>
+            <div class="tab_content" id="outer_content">
+                <label><input type="checkbox" name="kardigun"> 가디건 </label>
+                <label><input type="checkbox" name="jumper"> 점퍼 </label>
+                <label><input type="checkbox" name="jacket"> 재킷 </label>
+                <label><input type="checkbox" name="coat"> 코트 </label>
+                <label><input type="checkbox" name="padding"> 패딩 </label>
+            </div>
+        </div>
+        <div id = "submit_btn_group">
+            <table width="100%">
+                <tr>
+                    <td style="width=50%">
+                        <button type="button" onclick="send();">전송</button>
+                    </td>
+                    <td style="width=50%">
+                        <input type="reset" value="초기화" >
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+-->
+</body>
+
+<script>
+     function send() {
+        alert("send");
+        document.getElementById("contents").submit();
+    }
+</script>
+</html>
